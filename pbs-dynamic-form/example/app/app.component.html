@@ -1,0 +1,24 @@
+<pbs-dynamic-form
+  [schema]="schema"
+  [form]="form"
+  [model]="formModel"
+  [data]="data$ | async"
+></pbs-dynamic-form>
+<span>
+  <button (click)="setModel()" id="setModel">Set model</button>
+</span>
+<span>
+  <button (click)="setVoidModel()" id="setVoidModel">Clear model</button>
+</span>
+<span>
+  <button (click)="setComboValue()" id="setComboValue">Set value to combobox</button>
+</span>
+<span>
+  <button (click)="setBackendErrors()" id="setBackendErrors">Set Backend Errors</button>
+</span>
+<span>
+  <button (click)="setBackendErrorsToAll()" id="setBackendErrorsToAll">Set Backend Errors To All</button>
+</span>
+
+<h2>Model</h2>
+<pre class="value">{{form.value|json}}</pre>
